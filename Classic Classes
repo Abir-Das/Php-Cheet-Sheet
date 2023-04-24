@@ -1,0 +1,188 @@
+#DateTime
+
+$date = new DateTime('2023-04-24'); // create a new DateTime object with the specified date
+echo $date->format('Y-m-d'); // output the date in the format "YYYY-MM-DD"
+
+
+
+
+
+
+#PDO stands for PHP Data Objects
+
+// First, create a PDO object with the connection details
+$dsn = "mysql:host=localhost;dbname=yourdatabase;charset=utf8mb4";
+$username = "yourusername";
+$password = "yourpassword";
+$pdo = new PDO($dsn, $username, $password);
+
+// Then, prepare and execute a SQL query
+$stmt = $pdo->prepare("SELECT * FROM yourtable");
+$stmt->execute();
+
+// Finally, retrieve the data
+$results = $stmt->fetchAll(PDO::FETCH_ASSOC);
+foreach ($results as $row) {
+    echo $row['column1'] . " - " . $row['column2'] . "\n";
+}
+
+
+
+#Exception
+
+try {
+    // Some code that might throw an exception
+    $result = 10 / 0; // This will cause a division by zero error and throw an exception
+} catch (Exception $e) {
+    // Catch the exception and handle it
+    echo "Caught exception: " . $e->getMessage();
+}
+
+
+
+#Error
+
+try {
+    // Some code that might throw an exception
+    $result = 10 / 0; // This will cause a division by zero error and throw an exception
+} catch (Exception $e) {
+    // Catch the exception and handle it
+    echo "Caught exception: " . $e->getMessage();
+}
+
+
+
+#stdClass
+
+stdClass is a built-in PHP class that is used to create an empty object. It is similar to an associative array, but with the added benefit of being an object, meaning you can use object-oriented programming techniques with it.
+
+$myObject = new stdClass();
+$myObject->name = "John Doe";
+$myObject->age = 30;
+$myObject->email = "john.doe@example.com";
+
+
+#ArrayObject
+
+ArrayObject is a built-in class in PHP that provides an object-oriented interface to arrays. It extends the base ArrayAccess interface and adds several useful methods for working with arrays in an object-oriented way.
+
+$product = new ArrayObject();
+$product["type"] = "aparels";
+$product["sku"] = "34SR";
+// $product->name = "test";
+
+// echo $product["type"];
+echo $product->count();
+
+
+
+
+#SimpleXMLElement
+
+    $xmlString = "<product><name>blue T</name><type>simpletype</type></product>";
+
+    $xml = new SimpleXMLElement($xmlString);
+
+    // this getName function used  to findout the root element name
+    $root = $xml->getName();
+
+    $name = $xml->name;
+
+    $type = $xml->product->type;
+
+    echo $name;
+
+
+
+
+################################################## Library classes In PHP ###################################################################
+
+
+__PHP_Incomplete_Class
+ArrayAccess
+ArrayIterator
+ArrayObject
+BadFunctionCallException
+BadMethodCallException
+CachingIterator
+CallbackFilterIterator
+DateTime
+DateTimeImmutable
+DateTimeInterface
+DateTimeZone
+Directory
+DomainException
+EmptyIterator
+Error
+ErrorException
+Exception
+FilesystemIterator
+FilterIterator
+GlobIterator
+InfiniteIterator
+InvalidArgumentException
+Iterator
+IteratorAggregate
+IteratorIterator
+LengthException
+LogicException
+MultipleIterator
+NoRewindIterator
+OutOfBoundsException
+OutOfRangeException
+OverflowException
+ParentIterator
+PDO
+PDOStatement
+Phar
+PharData
+PharException
+PharFileInfo
+RecursiveArrayIterator
+RecursiveCachingIterator
+RecursiveCallbackFilterIterator
+RecursiveDirectoryIterator
+RecursiveFilterIterator
+RecursiveIterator
+RecursiveIteratorIterator
+RecursiveRegexIterator
+RecursiveTreeIterator
+ReflectionClass
+ReflectionException
+ReflectionFunction
+ReflectionFunctionAbstract
+ReflectionMethod
+ReflectionObject
+ReflectionParameter
+ReflectionProperty
+ReflectionType
+RegexIterator
+RuntimeException
+SimpleXMLElement
+SimpleXMLIterator
+SplDoublyLinkedList
+SplFileInfo
+SplFileObject
+SplFixedArray
+SplHeap
+SplMinHeap
+SplMaxHeap
+SplObjectStorage
+SplObserver
+SplPriorityQueue
+SplQueue
+SplStack
+stdClass
+SyntaxError
+Traversable
+TypeError
+UnderflowException
+UnexpectedValueException
+
+
+
+
+
+
+
+
